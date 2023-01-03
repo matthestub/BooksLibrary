@@ -1,6 +1,6 @@
-package utils;
+package com.example.mylibrary.utils;
 
-import com.example.mylibrary.LibraryApp;
+import com.example.mylibrary.app.LibraryApp;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
 

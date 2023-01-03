@@ -17,5 +17,5 @@ plikami w razie potrzeby.
 5. W SB lub odpowiednim pliku FXML muszę wskazać plik z resourceami z którego plik ma korzystać a następnie dla każdej kontrolki
 która ma dostosowywać język muszę w atrybucie Text ustawić korzystanie z internactionalization oraz wpisać odpowiedni KEY jako text
 
-6. Tutuł aplikacji mogę bezpośrednio ustawić jako korzystający z key=values poprzez: resourceBundles.getString("app.title") <- podając key
+6. Tutuł aplikacji mogę bezpośrednio ustawić jako korzystający z key=values poprzez: resourceBundles.getString("com.example.mylibrary.app.title") <- podając key
 7. Sprawdzenie zmiany wykonuję poprzez zmianę lokalizacji dla aplikacji poprzez: Local.setDefault(new Local("en"));

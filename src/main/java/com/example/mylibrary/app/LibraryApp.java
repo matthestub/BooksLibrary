@@ -1,14 +1,12 @@
-package com.example.mylibrary;
+package com.example.mylibrary.app;
 
+import com.example.mylibrary.dbutils.DbManager;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import utils.Fxml;
+import com.example.mylibrary.utils.Fxml;
 
 import java.io.IOException;
-import java.util.Locale;
-import java.util.ResourceBundle;
 
 public class LibraryApp extends Application {
 
@@ -27,6 +25,7 @@ public class LibraryApp extends Application {
         stage.setTitle(Fxml.getResourceBundle().getString("app.title"));
         stage.setScene(scene);
         stage.show();
+        DbManager.initDatabase();
     }
 
     public static void main(String[] args) {

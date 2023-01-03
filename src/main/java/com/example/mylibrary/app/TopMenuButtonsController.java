@@ -1,5 +1,6 @@
-package com.example.mylibrary;
+package com.example.mylibrary.app;
 
+import com.example.mylibrary.app.LibraryController;
 import javafx.fxml.FXML;
 import javafx.scene.control.ToggleGroup;
 

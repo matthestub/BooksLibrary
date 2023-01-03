@@ -14,6 +14,13 @@
         <junit.version>5.8.2</junit.version>
     </properties>
 
+<!--    <properties>-->
+<!--        <maven.compiler.source>17</maven.compiler.source>-->
+<!--        <maven.compiler.target>17</maven.compiler.target>-->
+<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+<!--        <junit.version>5.8.2</junit.version>-->
+<!--    </properties>-->
+
     <dependencies>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -38,6 +45,19 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.j256.ormlite</groupId>
+            <artifactId>ormlite-jdbc</artifactId>
+            <version>6.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.1.214</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -60,10 +80,10 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.mylibrary/com.example.mylibrary.LibraryApp</mainClass>
-                            <launcher>app</launcher>
-                            <jlinkZipName>app</jlinkZipName>
-                            <jlinkImageName>app</jlinkImageName>
+                            <mainClass>com.example.mylibrary/com.example.mylibrary.app.LibraryApp</mainClass>
+                            <launcher>com.example.mylibrary.app</launcher>
+                            <jlinkZipName>com.example.mylibrary.app</jlinkZipName>
+                            <jlinkImageName>com.example.mylibrary.app</jlinkImageName>
                             <noManPages>true</noManPages>
                             <stripDebug>true</stripDebug>
                             <noHeaderFiles>true</noHeaderFiles>
