@@ -12,14 +12,14 @@ public class Author implements BaseModel {
     }
 
     @DatabaseField(generatedId = true)
-    private int id;
+    public int id;
     @DatabaseField(columnName = "Author_name")
-    private String authorName;
+    public String authorName;
     @DatabaseField(columnName = "Author_surname")
-    private String authorSurname;
+    public String authorSurname;
 
     @ForeignCollectionField(eager = true) // eager oznacza ze ta kolekcja od razu zostanie uzupelniona, lazy - tylko gdy odpytam
-    private ForeignCollection<Book> booksCollection;
+    public ForeignCollection<Book> booksCollection;
 
     public int getId() {
         return id;

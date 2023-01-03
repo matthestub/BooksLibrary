@@ -13,25 +13,25 @@ public class Book implements BaseModel {
     }
 
     @DatabaseField(generatedId = true)
-    private int id;
+    public int id;
     @DatabaseField(columnName = "TITLE", canBeNull = false )
-    private String title;
+    public String title;
     @DatabaseField(columnName = "AUTHOR_ID", foreign = true, foreignAutoCreate = true, foreignAutoRefresh = true)
-    private Author author;
+    public Author author;
     @DatabaseField(columnName = "DESCRIPTION", dataType = DataType.LONG_STRING) //zmapowanie na inny typ niż domyślny - tutaj domyślny to VARCHAR
-    private String description;
+    public String description;
     @DatabaseField(columnName = "ISBN", unique = true)
-    private String isbn;
+    public String isbn;
     @DatabaseField(columnName = "ADDED_DATE")
-    private Date addedDate;
+    public Date addedDate;
     @DatabaseField(columnName = "DATE_RELEASE", dataType = DataType.DATE_STRING, format = "dd/MM/yyyy")
-    private Date dateRelease;
+    public Date dateRelease;
     @DatabaseField(columnName = "RATING", width = 1) //ograniczenie do ilości znakó - tutaj tylko jedna ocena od 1 do 5
-    private String rating;
+    public String rating;
     @DatabaseField(columnName = "BORROWED", defaultValue = "false")
-    private boolean borrowed;
+    public boolean borrowed;
     @DatabaseField(columnName = "PRICE")
-    private double price;
+    public double price;
 
     public String getTitle() {
         return title;

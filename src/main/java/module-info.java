@@ -9,8 +9,8 @@ module com.example.mylibrary {
     exports com.example.mylibrary.utils;
     opens com.example.mylibrary.utils to javafx.fxml;
     exports com.example.mylibrary.app;
-//    exports com.example.mylibrary.daos;
-//    exports com.example.mylibrary.dbutils;
+    exports com.example.mylibrary.daos;
+    exports com.example.mylibrary.dbutils;
     exports com.example.mylibrary.models;
     opens com.example.mylibrary.app to javafx.fxml;
 }

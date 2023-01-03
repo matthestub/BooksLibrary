@@ -13,9 +13,10 @@ import java.sql.SQLException;
 public class DbManager {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(DbManager.class);
-    private static final String JDBC_H2_DRIVER = "jdbc:h2:./libraryDB";
-    private static final String H2_USER = "matthestub";
-    private static final String H2_PASS = "p@sswd";
+//    private static final String JDBC_H2_DRIVER = "jdbc:h2:./libraryDB";
+    private static final String JDBC_SQLITE_DRIVER = "jdbc:sqlite:libraryDB.db";
+//    private static final String H2_USER = "matthestub";
+//    private static final String H2_PASS = "p@sswd";
     private static ConnectionSource connectionSource;
 
     public static void initDatabase() {
@@ -27,7 +28,7 @@ public class DbManager {
 
     private static void createConnectionSource() {
         try {
-            connectionSource = new JdbcConnectionSource(JDBC_H2_DRIVER, H2_USER, H2_PASS);
+            connectionSource = new JdbcConnectionSource(JDBC_SQLITE_DRIVER);
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage());
         }
@@ -62,7 +63,7 @@ public class DbManager {
     private static void dropTable() {
         try {
             TableUtils.dropTable(connectionSource, Author.class, true);
-            TableUtils.dropTable(connectionSource, Author.class, true);
+            TableUtils.dropTable(connectionSource, Book.class, true);
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage());
         }

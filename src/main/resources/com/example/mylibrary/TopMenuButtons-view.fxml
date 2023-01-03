@@ -8,7 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mylibrary.app.TopMenuButtonsController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mylibrary.app.TopMenuButtonsController">
    <children>
       <ToggleButton mnemonicParsing="false" onAction="#openLibrary" prefHeight="80.0" prefWidth="150.0" text="%library">
          <toggleGroup>
@@ -22,6 +22,15 @@
             <ImageView fitHeight="50.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/addbook.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#addCategory" prefHeight="80.0" prefWidth="150.0" text="%cat.add">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/icons8-category-58.png" />
                </image>
             </ImageView>
          </graphic>

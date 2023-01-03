@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class LibraryApp extends Application {
 
-    public static final String MAIN_VIEW_FXML = "main-view.fxml";
+    public static final String MAIN_VIEW_FXML = "/com/example/mylibrary/main-view.fxml";
 
     @Override
     public void start(Stage stage) throws IOException {
