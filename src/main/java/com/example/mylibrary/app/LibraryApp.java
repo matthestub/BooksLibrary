@@ -21,7 +21,7 @@ public class LibraryApp extends Application {
 //        ResourceBundle resourceBundle = ResourceBundle.getBundle("bundles.messages");
 //        fxmlLoader.setResources(resourceBundle);
 
-        Scene scene = new Scene(Fxml.loadFxmlFile(MAIN_VIEW_FXML), 800, 600);
+        Scene scene = new Scene(Fxml.loadFxmlFile(MAIN_VIEW_FXML), 840, 600);
         stage.setTitle(Fxml.getResourceBundle().getString("app.title"));
         stage.setScene(scene);
         stage.show();

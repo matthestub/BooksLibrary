@@ -18,7 +18,7 @@ public abstract class UniversalDao {
     private final ConnectionSource connectionSource;
 
 
-    protected UniversalDao(ConnectionSource connectionSource) {
+    public UniversalDao(ConnectionSource connectionSource) {
         this.connectionSource = connectionSource;
     }
 
@@ -48,6 +48,15 @@ public abstract class UniversalDao {
             LOGGER.warn(e.getMessage());
         }
         return null;
+    }
+
+    public <T extends BaseModel, I> void universalDeleteById(Class<T> cls, I id) {
+        Dao<T, I> dao = getDao(cls);
+        try {
+            dao.deleteById(id);
+        } catch (SQLException e) {
+            LOGGER.warn(e.getMessage());
+        }
     }
 
     public <T extends BaseModel, I> void universalDelete(BaseModel baseModel) {

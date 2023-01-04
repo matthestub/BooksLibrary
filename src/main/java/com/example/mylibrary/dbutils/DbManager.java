@@ -2,6 +2,7 @@ package com.example.mylibrary.dbutils;
 
 import com.example.mylibrary.models.Author;
 import com.example.mylibrary.models.Book;
+import com.example.mylibrary.models.Category;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
@@ -21,7 +22,7 @@ public class DbManager {
 
     public static void initDatabase() {
         createConnectionSource();
-        dropTable();
+        //dropTable();
         createTable();
         closeConnectionSource();
     }
@@ -55,6 +56,7 @@ public class DbManager {
         try {
             TableUtils.createTableIfNotExists(connectionSource, Author.class);
             TableUtils.createTableIfNotExists(connectionSource, Book.class);
+            TableUtils.createTableIfNotExists(connectionSource, Category.class);
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage());
         }
@@ -64,6 +66,7 @@ public class DbManager {
         try {
             TableUtils.dropTable(connectionSource, Author.class, true);
             TableUtils.dropTable(connectionSource, Book.class, true);
+            TableUtils.dropTable(connectionSource, Category.class, true);
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage());
         }
